@@ -1,0 +1,58 @@
+﻿<Device id="d1" name="Fanuc-CNC" uuid="5fd88408-7811-3c6b-5400-11f4026b6890">
+	<Description manufacturer="MyFanuc" serialNumber="000000">Mill w/SMooth-G</Description>
+	<DataItems>
+		<DataItem category="EVENT" id="avail" type="AVAILABILITY"/>
+	</DataItems>
+	<Components>
+		<Axes id="a" name="base">
+			<Components>
+				<Linear id="x" name="X">
+					<DataItems>
+						<DataItem category="SAMPLE" id="Xabs" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+						<DataItem category="SAMPLE" id="Xrel" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+						<DataItem category="SAMPLE" id="Xload" type="LOAD" units="PERCENT"/>
+					</DataItems>
+				</Linear>
+				<Linear id="y" name="Y">
+					<DataItems>
+						<DataItem category="SAMPLE" id="Yabs" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+						<DataItem category="SAMPLE" id="Yrel" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+						<DataItem category="SAMPLE" id="Yload" type="LOAD" units="PERCENT"/>
+					</DataItems>
+				</Linear>
+				<Linear id="z" name="Z">
+					<DataItems>
+						<DataItem category="SAMPLE" id="Zabs" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+						<DataItem category="SAMPLE" id="Zrel" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+						<DataItem category="SAMPLE" id="Zload" type="LOAD" units="PERCENT"/>
+					</DataItems>
+				</Linear>
+			</Components>
+		</Axes>
+		<Controller id="cont" name="controller">
+			<DataItems>
+				<DataItem category="CONDITION" id="alarm1" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm2" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm3" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm4" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm5" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm6" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm7" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm8" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm9" type="SYSTEM"/>
+				<DataItem category="CONDITION" id="alarm10" type="SYSTEM"/>
+				<DataItem category="EVENT" id="estop" type="EMERGENCY_STOP"/>
+			</DataItems>
+			<Components>
+				<Path id="path1" name="path">
+					<DataItems>
+						<DataItem category="EVENT" id="program" subType="MAIN" type="PROGRAM"/>
+						<DataItem category="EVENT" id="status" type="STATUS"/>
+						<DataItem category="EVENT" id="mode" type="CONTROLLER_MODE"/>
+						<DataItem category="EVENT" id="program_cmt" subType="MAIN" type="PROGRAM_COMMENT"/>
+					</DataItems>
+				</Path>
+			</Components>
+		</Controller>
+	</Components>
+</Device>
